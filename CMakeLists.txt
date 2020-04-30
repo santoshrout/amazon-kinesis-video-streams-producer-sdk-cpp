@@ -75,8 +75,8 @@ if(BUILD_DEPENDENCIES)
   build_dependency(curl -DBUILD_STATIC=${BUILD_STATIC} -DUSE_OPENSSL=${USE_OPENSSL} -DUSE_MBEDTLS=${USE_MBEDTLS})
 
   build_dependency(jsmn)
-  build_dependency(autoconf)
-  build_dependency(automake)
+  #build_dependency(autoconf)
+  #build_dependency(automake)
   build_dependency(log4cplus)
 
   if(BUILD_TEST)

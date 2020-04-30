@@ -1,0 +1,11 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+new file mode 100644
+--- /dev/null
++++ b/CMakeLists.txt
+@@ -0,0 +1,6 @@
++cmake_minimum_required(VERSION 2.8)
++
++project(jsmn C)
++add_library(jsmn STATIC jsmn.h jsmn.c)
++install(TARGETS jsmn DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
++install(FILES jsmn.h DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
