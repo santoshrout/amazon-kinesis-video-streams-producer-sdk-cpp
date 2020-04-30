@@ -32,10 +32,13 @@ matrix:
         os: windows
         before_install: skip # Only for Linux
         before_script:
+          - choco install strawberryperl
+          - export "PATH=/c/Strawberry/perl/site/bin:/c/Strawberry/perl/bin:/c/Strawberry/c/bin:$PATH"
+          - call "c:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Auxiliary\Build\vcvarsall.bat" amd64
           - mkdir build && cd build && cmake .. -DBUILD_TEST=TRUE
-        script:
-          - make
-          - ./tst/producerTest
+            # script:
+            #   - make
+            #   - ./tst/producerTest
 
       # # MacOS Builds
       # - name: "OSX GCC"
